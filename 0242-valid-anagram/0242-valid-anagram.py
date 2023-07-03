@@ -1,8 +1,6 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         
-        checkAnagram = True
-        
         hashTableS,hashTableT = {}, {}
         
         for i in s:
@@ -16,10 +14,8 @@ class Solution:
             else: hashTableT[i] = 1
         
       
-        checkAnagram = (hashTableT == hashTableS)
         
         
-        
-        return checkAnagram
+        return hashTableT == hashTableS
               
         
